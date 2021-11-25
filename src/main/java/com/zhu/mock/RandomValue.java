@@ -35,11 +35,9 @@ public class RandomValue {
     /**
      * 方法描述：调用mockJs生成模拟数据.
      * 创建时间：2019-06-14 14:59:00
-     * 创建作者：李兴武
      *
      * @param script js脚本
      * @throws ScriptException 脚本书写错误将会发生异常
-     * @author "lixingwu"
      */
     public static Object mockRandom(String script) throws ScriptException {
         // 把mockjs读取到缓存
@@ -266,9 +264,7 @@ public class RandomValue {
     /**
      * 方法描述：返回一个随机的布尔值.
      * 创建时间：2019-06-14 15:08:42
-     * 创建作者：李兴武
      *
-     * @author "lixingwu"
      */
     public static boolean bool() throws ScriptException {
         Object random = mockRandom("Random.boolean()");
@@ -278,7 +274,6 @@ public class RandomValue {
     /**
      * 方法描述：返回一个随机的布尔值.
      * 创建时间：2019-06-14 15:08:42
-     * 创建作者：李兴武
      *
      * @param min     指示参数 current 出现的概率。概率计算公式为 min / (min + max)。
      *                该参数的默认值为 1，即有 50% 的概率返回参数 current。
@@ -288,7 +283,6 @@ public class RandomValue {
      *                该参数没有默认值。在该方法的内部，依据原生方法 Math.random() 返回的（浮点）数来计算和返回布尔值，
      *                例如在最简单的情况下，返回值是表达式 Math.random() >= 0.5 的执行结果。
      * @return the boolean
-     * @author "lixingwu"
      */
     public static boolean bool(int min, int max, boolean current) throws ScriptException {
         String format = StrFormatter.format("Random.boolean({}, {}, {})", min, max, current);
@@ -299,9 +293,7 @@ public class RandomValue {
     /**
      * 方法描述：返回一个随机的自然数（大于等于 0 的整数）。
      * 创建时间：2019-06-14 15:40:20
-     * 创建作者：李兴武
      *
-     * @author "lixingwu"
      */
     public static long natural() throws ScriptException {
         Object random = mockRandom("Random.natural()");
@@ -311,10 +303,8 @@ public class RandomValue {
     /**
      * 方法描述：返回一个随机的自然数（大于等于 0 的整数）。
      * 创建时间：2019-06-14 15:40:20
-     * 创建作者：李兴武
      *
      * @param min 指示随机自然数的最小值。默认值为 0。
-     * @author "lixingwu"
      */
     public static long natural(long min) throws ScriptException {
         String format = StrFormatter.format("Random.natural({})", min);
@@ -325,11 +315,9 @@ public class RandomValue {
     /**
      * 方法描述：返回一个随机的自然数（大于等于 0 的整数）。
      * 创建时间：2019-06-14 15:40:20
-     * 创建作者：李兴武
      *
      * @param min 指示随机自然数的最小值。默认值为 0。
      * @param max 指示随机自然数的最大值。默认值为 9007199254740992。
-     * @author "lixingwu"
      */
     public static long natural(long min, long max) throws ScriptException {
         String format = StrFormatter.format("Random.natural({},{})", min, max);
@@ -340,9 +328,7 @@ public class RandomValue {
     /**
      * 方法描述：返回一个随机的浮点数。.
      * 创建时间：2019-06-14 15:53:04
-     * 创建作者：李兴武
      *
-     * @author "lixingwu"
      */
     public static float floatNumber() throws ScriptException {
         Object random = mockRandom("Random.float()");
@@ -352,13 +338,11 @@ public class RandomValue {
     /**
      * 方法描述：返回一个随机的浮点数。
      * 创建时间：2019-06-14 15:53:04
-     * 创建作者：李兴武
      *
      * @param min  整数部分的最小值。默认值为 -9007199254740992。
      * @param max  整数部分的最大值。默认值为 9007199254740992。
      * @param dmin 小数部分位数的最小值。默认值为 0。
      * @param dmax 小数部分位数的最大值。默认值为 17。
-     * @author "lixingwu"
      */
     public static float floatNumber(float min, float max, float dmin, float dmax) throws ScriptException {
         String format = StrFormatter.format("Random.float({},{},{},{})", min, max, dmin, dmax);
@@ -370,9 +354,7 @@ public class RandomValue {
      * 方法描述：返回一个随机字符。
      * 范围：abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789!@#$%^&*()[]
      * 创建时间：2019-06-14 15:59:16
-     * 创建作者：李兴武
      *
-     * @author "lixingwu"
      */
     public static Character character() throws ScriptException {
         Object random = mockRandom("Random.character()");
@@ -382,7 +364,6 @@ public class RandomValue {
     /**
      * 方法描述：返回一个随机字符。
      * 创建时间：2019-06-14 15:59:16
-     * 创建作者：李兴武
      *
      * @param pool 表示字符池，将从中选择一个字符返回
      *             lower: "abcdefghijklmnopqrstuvwxyz",
@@ -390,7 +371,6 @@ public class RandomValue {
      *             number: "0123456789",
      *             symbol: "!@#$%^&*()[]"
      *             也可自定义
-     * @author "lixingwu"
      */
     public static Character character(String pool) throws ScriptException {
         String format = StrFormatter.format("Random.character('{}')", pool);
@@ -401,11 +381,9 @@ public class RandomValue {
     /**
      * 方法描述：返回一个随机字符串.
      * 创建时间：2019-06-14 16:07:50
-     * 创建作者：李兴武
      *
      * @param pool   表示字符池，将从中选择一个字符返回
      * @param length 返回的长度
-     * @author "lixingwu"
      */
     public static String string(String pool, int length) throws ScriptException {
         String format = StrFormatter.format("Random.string('{}',{})", pool, length);
@@ -416,12 +394,10 @@ public class RandomValue {
     /**
      * 方法描述：返回一个随机字符串.
      * 创建时间：2019-06-14 16:07:50
-     * 创建作者：李兴武
      *
      * @param pool 表示字符池，将从中选择一个字符返回
      * @param min  随机字符串的最小长度。默认值为 3。
      * @param max  随机字符串的最大长度。默认值为 7。
-     * @author "lixingwu"
      */
     public static String string(String pool, int min, int max) throws ScriptException {
         String format = StrFormatter.format("Random.string('{}',{},{})", pool, min, max);
@@ -432,11 +408,9 @@ public class RandomValue {
     /**
      * 方法描述：返回一个整型数组。
      * 创建时间：2019-06-14 17:34:27
-     * 创建作者：李兴武
      *
      * @param start 数组中整数的起始值。
      * @param stop  数组中整数的结束值（不包含在返回值中）。
-     * @author "lixingwu"
      */
     public static Integer[] range(int start, int stop) throws ScriptException {
         String format = StrFormatter.format("Random.range({},{})", start, stop);
@@ -447,12 +421,10 @@ public class RandomValue {
     /**
      * 方法描述：返回一个整型数组。
      * 创建时间：2019-06-14 17:34:27
-     * 创建作者：李兴武
      *
      * @param start 数组中整数的起始值。
      * @param stop  数组中整数的结束值（不包含在返回值中）。
      * @param step  数组中整数之间的步长。默认值为 1。
-     * @author "lixingwu"
      */
     public static Integer[] range(int start, int stop, int step) throws ScriptException {
         String format = StrFormatter.format("Random.range({},{},{})", start, stop, step);
@@ -463,9 +435,7 @@ public class RandomValue {
     /**
      * 方法描述：返回一个随机的日期字符串.
      * 创建时间：2019-06-14 20:33:11
-     * 创建作者：李兴武
      *
-     * @author "lixingwu"
      */
     public static String date() throws ScriptException {
         String format = StrFormatter.format("Random.date()");
@@ -476,10 +446,8 @@ public class RandomValue {
     /**
      * 方法描述：返回一个随机的日期字符串.
      * 创建时间：2019-06-14 20:33:11
-     * 创建作者：李兴武
      *
      * @param dateFormat 指示生成的日期字符串的格式。默认值为 yyyy-MM-dd。
-     * @author "lixingwu"
      */
     public static String date(String dateFormat) throws ScriptException {
         String format = StrFormatter.format("Random.date('{}')", dateFormat);
@@ -490,9 +458,7 @@ public class RandomValue {
     /**
      * 方法描述：返回一个随机的时间字符串。
      * 创建时间：2019-06-14 20:38:31
-     * 创建作者：李兴武
      *
-     * @author "lixingwu"
      */
     public static String time() throws ScriptException {
         String format = StrFormatter.format("Random.time()");
@@ -503,10 +469,8 @@ public class RandomValue {
     /**
      * 方法描述：返回一个随机的时间字符串。
      * 创建时间：2019-06-14 20:38:31
-     * 创建作者：李兴武
      *
      * @param timeFormat 指示生成的时间字符串的格式。默认值为 HH:mm:ss。
-     * @author "lixingwu"
      */
     public static String time(String timeFormat) throws ScriptException {
         String format = StrFormatter.format("Random.time('{}')", timeFormat);
@@ -517,9 +481,7 @@ public class RandomValue {
     /**
      * 方法描述：返回一个随机的日期和时间字符串。
      * 创建时间：2019-06-14 20:38:31
-     * 创建作者：李兴武
      *
-     * @author "lixingwu"
      */
     public static String datetime() throws ScriptException {
         String format = StrFormatter.format("Random.datetime()");
@@ -530,10 +492,8 @@ public class RandomValue {
     /**
      * 方法描述：返回一个随机的日期和时间字符串。
      * 创建时间：2019-06-14 20:38:31
-     * 创建作者：李兴武
      *
      * @param datetimeFormat 指示生成的日期和时间字符串的格式。默认值为 yyyy-MM-dd HH:mm:ss。
-     * @author "lixingwu"
      */
     public static String datetime(String datetimeFormat) throws ScriptException {
         String format = StrFormatter.format("Random.datetime('{}')", datetimeFormat);
@@ -544,9 +504,7 @@ public class RandomValue {
     /**
      * 方法描述：随机生成一个有吸引力的颜色，格式为 '#RRGGBB'。
      * 创建时间：2019-06-14 21:39:33
-     * 创建作者：李兴武
      *
-     * @author "lixingwu"
      */
     public static String color() throws ScriptException {
         String format = StrFormatter.format("Random.color()");
@@ -557,9 +515,7 @@ public class RandomValue {
     /**
      * 方法描述：随机生成一个有吸引力的颜色，格式为 '#RRGGBB'。
      * 创建时间：2019-06-14 21:39:33
-     * 创建作者：李兴武
      *
-     * @author "lixingwu"
      */
     public static String hex() throws ScriptException {
         String format = StrFormatter.format("Random.hex()");
@@ -570,9 +526,7 @@ public class RandomValue {
     /**
      * 方法描述：随机生成一个有吸引力的颜色，格式为 'rgb(r, g, b)'。
      * 创建时间：2019-06-14 21:39:33
-     * 创建作者：李兴武
      *
-     * @author "lixingwu"
      */
     public static String rgb() throws ScriptException {
         String format = StrFormatter.format("Random.rgb()");
@@ -583,9 +537,7 @@ public class RandomValue {
     /**
      * 方法描述：随机生成一个有吸引力的颜色，格式为 'rgba(r, g, b, a)'。
      * 创建时间：2019-06-14 21:39:33
-     * 创建作者：李兴武
      *
-     * @author "lixingwu"
      */
     public static String rgba() throws ScriptException {
         String format = StrFormatter.format("Random.rgba()");
@@ -596,9 +548,7 @@ public class RandomValue {
     /**
      * 方法描述：随机生成一个有吸引力的颜色，格式为 'hsl(h, s, l)'。
      * 创建时间：2019-06-14 21:39:33
-     * 创建作者：李兴武
      *
-     * @author "lixingwu"
      */
     public static String hsl() throws ScriptException {
         String format = StrFormatter.format("Random.hsl()");
@@ -609,9 +559,7 @@ public class RandomValue {
     /**
      * 方法描述：随机生成一段英文文本。
      * 创建时间：2019-06-14 21:47:07
-     * 创建作者：李兴武
      *
-     * @author "lixingwu"
      */
     public static String paragraph() throws ScriptException {
         String format = StrFormatter.format("Random.paragraph()");
@@ -622,10 +570,8 @@ public class RandomValue {
     /**
      * 方法描述：随机生成一段英文文本。
      * 创建时间：2019-06-14 21:47:07
-     * 创建作者：李兴武
      *
      * @param len 指示文本中句子的个数。默认值为 3 到 7 之间的随机数。
-     * @author "lixingwu"
      */
     public static String paragraph(int len) throws ScriptException {
         String format = StrFormatter.format("Random.paragraph({})", len);
@@ -636,11 +582,9 @@ public class RandomValue {
     /**
      * 方法描述：随机生成一段英文文本。
      * 创建时间：2019-06-14 21:47:07
-     * 创建作者：李兴武
      *
      * @param min 指示文本中句子的最小个数。默认值为 3。
      * @param max 指示文本中句子的最大个数。默认值为 7。
-     * @author "lixingwu"
      */
     public static String paragraph(int min, int max) throws ScriptException {
         String format = StrFormatter.format("Random.paragraph({},{})", min, max);
@@ -651,9 +595,7 @@ public class RandomValue {
     /**
      * 方法描述：随机生成一段中文文本。
      * 创建时间：2019-06-14 21:47:07
-     * 创建作者：李兴武
      *
-     * @author "lixingwu"
      */
     public static String cparagraph() throws ScriptException {
         String format = StrFormatter.format("Random.cparagraph()");
@@ -664,10 +606,8 @@ public class RandomValue {
     /**
      * 方法描述：随机生成一段中文文本。
      * 创建时间：2019-06-14 21:47:07
-     * 创建作者：李兴武
      *
      * @param len 指示文本中句子的个数。默认值为 3 到 7 之间的随机数。
-     * @author "lixingwu"
      */
     public static String cparagraph(int len) throws ScriptException {
         String format = StrFormatter.format("Random.cparagraph({})", len);
@@ -678,11 +618,9 @@ public class RandomValue {
     /**
      * 方法描述：随机生成一段中文文本。
      * 创建时间：2019-06-14 21:47:07
-     * 创建作者：李兴武
      *
      * @param min 指示文本中句子的最小个数。默认值为 3。
      * @param max 指示文本中句子的最大个数。默认值为 7。
-     * @author "lixingwu"
      */
     public static String cparagraph(int min, int max) throws ScriptException {
         String format = StrFormatter.format("Random.cparagraph({},{})", min, max);
@@ -693,9 +631,7 @@ public class RandomValue {
     /**
      * 方法描述：随机生成一个单词。
      * 创建时间：2019-06-14 21:47:07
-     * 创建作者：李兴武
      *
-     * @author "lixingwu"
      */
     public static String word() throws ScriptException {
         String format = StrFormatter.format("Random.word()");
@@ -706,10 +642,8 @@ public class RandomValue {
     /**
      * 方法描述：随机生成一个单词。
      * 创建时间：2019-06-14 21:47:07
-     * 创建作者：李兴武
      *
      * @param len 指示单词中字符的个数。默认值为 3 到 10 之间的随机数。
-     * @author "lixingwu"
      */
     public static String word(int len) throws ScriptException {
         String format = StrFormatter.format("Random.word({})", len);
@@ -720,11 +654,9 @@ public class RandomValue {
     /**
      * 方法描述：随机生成一个单词。
      * 创建时间：2019-06-14 21:47:07
-     * 创建作者：李兴武
      *
      * @param min 指示单词中字符的最小个数。默认值为 3。
      * @param max 指示单词中字符的最大个数。默认值为 10。
-     * @author "lixingwu"
      */
     public static String word(int min, int max) throws ScriptException {
         String format = StrFormatter.format("Random.word({},{})", min, max);
@@ -735,9 +667,7 @@ public class RandomValue {
     /**
      * 方法描述：随机生成一个汉字。
      * 创建时间：2019-06-14 21:47:07
-     * 创建作者：李兴武
      *
-     * @author "lixingwu"
      */
     public static String cword() throws ScriptException {
         String format = StrFormatter.format("Random.cword()");
@@ -748,10 +678,8 @@ public class RandomValue {
     /**
      * 方法描述：随机生成一个汉字。
      * 创建时间：2019-06-14 21:47:07
-     * 创建作者：李兴武
      *
      * @param pool 汉字字符串。表示汉字字符池，将从中选择一个汉字字符返回。
-     * @author "lixingwu"
      */
     public static String cword(String pool) throws ScriptException {
         String format = StrFormatter.format("Random.cword('{}')", pool);
@@ -762,10 +690,8 @@ public class RandomValue {
     /**
      * 方法描述：随机生成 length 个汉字。
      * 创建时间：2019-06-14 21:47:07
-     * 创建作者：李兴武
      *
      * @param length 随机字符串的长度
-     * @author "lixingwu"
      */
     public static String cword(int length) throws ScriptException {
         String format = StrFormatter.format("Random.cword({})", length);
@@ -776,11 +702,9 @@ public class RandomValue {
     /**
      * 方法描述：随机生成汉字。
      * 创建时间：2019-06-14 21:47:07
-     * 创建作者：李兴武
      *
      * @param min 随机汉字字符串的最小长度。默认值为 1。
      * @param max 随机汉字字符串的最大长度。默认值为 1。
-     * @author "lixingwu"
      */
     public static String cword(int min, int max) throws ScriptException {
         String format = StrFormatter.format("Random.cword({},{})", min, max);
@@ -791,12 +715,10 @@ public class RandomValue {
     /**
      * 方法描述：随机生成汉字。
      * 创建时间：2019-06-14 21:47:07
-     * 创建作者：李兴武
      *
      * @param pool 汉字字符串。表示汉字字符池，将从中选择一个汉字字符返回。
      * @param min  随机汉字字符串的最小长度。默认值为 1。
      * @param max  随机汉字字符串的最大长度。默认值为 1。
-     * @author "lixingwu"
      */
     public static String cword(String pool, int min, int max) throws ScriptException {
         String format = StrFormatter.format("Random.cword('{}',{},{})", pool, min, max);
@@ -807,9 +729,7 @@ public class RandomValue {
     /**
      * 方法描述：随机生成一句标题，其中每个单词的首字母大写。
      * 创建时间：2019-06-14 22:04:58
-     * 创建作者：李兴武
      *
-     * @author "lixingwu"
      */
     public static String title() throws ScriptException {
         String format = StrFormatter.format("Random.title()");
@@ -820,10 +740,8 @@ public class RandomValue {
     /**
      * 方法描述：随机生成一句标题，其中每个单词的首字母大写。
      * 创建时间：2019-06-14 22:04:58
-     * 创建作者：李兴武
      *
      * @param len 指示单词中字符的个数。默认值为 3 到 7 之间的随机数。
-     * @author "lixingwu"
      */
     public static String title(int len) throws ScriptException {
         String format = StrFormatter.format("Random.title({})", len);
@@ -834,11 +752,9 @@ public class RandomValue {
     /**
      * 方法描述：随机生成一句标题，其中每个单词的首字母大写。
      * 创建时间：2019-06-14 22:04:58
-     * 创建作者：李兴武
      *
      * @param min 指示单词中字符的最小个数。默认值为 3。
      * @param max 指示单词中字符的最大个数。默认值为 7。
-     * @author "lixingwu"
      */
     public static String title(int min, int max) throws ScriptException {
         String format = StrFormatter.format("Random.title({},{})", min, max);
@@ -849,9 +765,7 @@ public class RandomValue {
     /**
      * 方法描述：随机生成一句中文标题。
      * 创建时间：2019-06-14 22:04:58
-     * 创建作者：李兴武
      *
-     * @author "lixingwu"
      */
     public static String ctitle() throws ScriptException {
         String format = StrFormatter.format("Random.ctitle()");
@@ -862,10 +776,8 @@ public class RandomValue {
     /**
      * 方法描述：随机生成一句中文标题。
      * 创建时间：2019-06-14 22:04:58
-     * 创建作者：李兴武
      *
      * @param len 指示单词中字符的个数。默认值为 3 到 7 之间的随机数。
-     * @author "lixingwu"
      */
     public static String ctitle(int len) throws ScriptException {
         String format = StrFormatter.format("Random.ctitle({})", len);
@@ -876,11 +788,9 @@ public class RandomValue {
     /**
      * 方法描述：随机生成一句中文标题。
      * 创建时间：2019-06-14 22:04:58
-     * 创建作者：李兴武
      *
      * @param min 指示单词中字符的最小个数。默认值为 3。
      * @param max 指示单词中字符的最大个数。默认值为 7。
-     * @author "lixingwu"
      */
     public static String ctitle(int min, int max) throws ScriptException {
         String format = StrFormatter.format("Random.ctitle({},{})", min, max);
@@ -891,9 +801,7 @@ public class RandomValue {
     /**
      * 方法描述：随机生成一个常见的英文名。
      * 创建时间：2019-06-14 22:10:52
-     * 创建作者：李兴武
      *
-     * @author "lixingwu"
      */
     public static String first() throws ScriptException {
         String format = StrFormatter.format("Random.first()");
@@ -904,9 +812,7 @@ public class RandomValue {
     /**
      * 方法描述：随机生成一个常见的英文姓。
      * 创建时间：2019-06-14 22:10:52
-     * 创建作者：李兴武
      *
-     * @author "lixingwu"
      */
     public static String last() throws ScriptException {
         String format = StrFormatter.format("Random.last()");
@@ -917,9 +823,7 @@ public class RandomValue {
     /**
      * 方法描述：随机生成一个常见的英文姓名。
      * 创建时间：2019-06-14 22:10:52
-     * 创建作者：李兴武
      *
-     * @author "lixingwu"
      */
     public static String name() throws ScriptException {
         String format = StrFormatter.format("Random.name()");
@@ -930,10 +834,8 @@ public class RandomValue {
     /**
      * 方法描述：随机生成一个常见的英文姓名。
      * 创建时间：2019-06-14 22:10:52
-     * 创建作者：李兴武
      *
      * @param middle 指示是否生成中间名。
-     * @author "lixingwu"
      */
     public static String name(boolean middle) throws ScriptException {
         String format = StrFormatter.format("Random.name({})", middle);
@@ -944,9 +846,7 @@ public class RandomValue {
     /**
      * 方法描述：随机生成一个常见的中文名。
      * 创建时间：2019-06-14 22:10:52
-     * 创建作者：李兴武
      *
-     * @author "lixingwu"
      */
     public static String cfirst() throws ScriptException {
         String format = StrFormatter.format("Random.cfirst()");
@@ -957,9 +857,7 @@ public class RandomValue {
     /**
      * 方法描述：随机生成一个常见的中文姓。
      * 创建时间：2019-06-14 22:10:52
-     * 创建作者：李兴武
      *
-     * @author "lixingwu"
      */
     public static String clast() throws ScriptException {
         String format = StrFormatter.format("Random.clast()");
@@ -970,9 +868,7 @@ public class RandomValue {
     /**
      * 方法描述：随机生成一个常见的中文姓名。
      * 创建时间：2019-06-14 22:10:52
-     * 创建作者：李兴武
      *
-     * @author "lixingwu"
      */
     public static String cname() throws ScriptException {
         String format = StrFormatter.format("Random.cname()");
@@ -983,9 +879,7 @@ public class RandomValue {
     /**
      * 方法描述：随机生成一个 URL。
      * 创建时间：2019-06-14 22:10:52
-     * 创建作者：李兴武
      *
-     * @author "lixingwu"
      */
     public static String url() throws ScriptException {
         String format = StrFormatter.format("Random.url()");
@@ -996,11 +890,9 @@ public class RandomValue {
     /**
      * 方法描述：随机生成一个 URL。
      * 创建时间：2019-06-14 22:10:52
-     * 创建作者：李兴武
      *
      * @param protocol 指定 URL 协议。例如 http。
      * @param host     指定 URL 域名和端口号。例如 nuysoft.com。
-     * @author "lixingwu"
      */
     public static String url(String protocol, String host) throws ScriptException {
         String format = StrFormatter.format("Random.url('{}','{}')", protocol, host);
@@ -1013,9 +905,7 @@ public class RandomValue {
      * 'http'、'ftp'、'gopher'、'mailto'、'mid'、'cid'、'news'、'nntp'、
      * 'prospero'、'telnet'、'rlogin'、'tn3270'、'wais'。
      * 创建时间：2019-06-14 22:10:52
-     * 创建作者：李兴武
      *
-     * @author "lixingwu"
      */
     public static String protocol() throws ScriptException {
         String format = StrFormatter.format("Random.protocol()");
@@ -1026,9 +916,7 @@ public class RandomValue {
     /**
      * 方法描述：随机生成一个域名。
      * 创建时间：2019-06-14 22:10:52
-     * 创建作者：李兴武
      *
-     * @author "lixingwu"
      */
     public static String domain() throws ScriptException {
         String format = StrFormatter.format("Random.domain()");
@@ -1039,9 +927,7 @@ public class RandomValue {
     /**
      * 方法描述：随机生成一个顶级域名（Top Level Domain）。
      * 创建时间：2019-06-14 22:10:52
-     * 创建作者：李兴武
      *
-     * @author "lixingwu"
      */
     public static String tld() throws ScriptException {
         String format = StrFormatter.format("Random.tld()");
@@ -1052,9 +938,7 @@ public class RandomValue {
     /**
      * 方法描述：随机生成一个邮件地址。
      * 创建时间：2019-06-14 22:10:52
-     * 创建作者：李兴武
      *
-     * @author "lixingwu"
      */
     public static String email() throws ScriptException {
         String format = StrFormatter.format("Random.email()");
@@ -1065,9 +949,7 @@ public class RandomValue {
     /**
      * 方法描述：随机生成一个邮件地址。
      * 创建时间：2019-06-14 22:10:52
-     * 创建作者：李兴武
      *
-     * @author "lixingwu"
      */
     public static String email(String domain) throws ScriptException {
         String format = StrFormatter.format("Random.email('{}')", domain);
@@ -1078,9 +960,7 @@ public class RandomValue {
     /**
      * 方法描述：随机生成一个 IP 地址。
      * 创建时间：2019-06-14 22:10:52
-     * 创建作者：李兴武
      *
-     * @author "lixingwu"
      */
     public static String ip() throws ScriptException {
         String format = StrFormatter.format("Random.ip()");
@@ -1091,9 +971,7 @@ public class RandomValue {
     /**
      * 方法描述：随机生成一个（中国）大区。
      * 创建时间：2019-06-14 22:24:57
-     * 创建作者：李兴武
      *
-     * @author "lixingwu"
      */
     public static String region() throws ScriptException {
         String format = StrFormatter.format("Random.region()");
@@ -1104,9 +982,7 @@ public class RandomValue {
     /**
      * 方法描述：随机生成一个（中国）省（或直辖市、自治区、特别行政区）。
      * 创建时间：2019-06-14 22:24:57
-     * 创建作者：李兴武
      *
-     * @author "lixingwu"
      */
     public static String province() throws ScriptException {
         String format = StrFormatter.format("Random.province()");
@@ -1117,9 +993,7 @@ public class RandomValue {
     /**
      * 方法描述：随机生成一个（中国）市。
      * 创建时间：2019-06-14 22:24:57
-     * 创建作者：李兴武
      *
-     * @author "lixingwu"
      */
     public static String city() throws ScriptException {
         String format = StrFormatter.format("Random.city()");
@@ -1130,10 +1004,8 @@ public class RandomValue {
     /**
      * 方法描述：随机生成一个（中国）市。
      * 创建时间：2019-06-14 22:24:57
-     * 创建作者：李兴武
      *
      * @param prefix 指示是否生成所属的省。
-     * @author "lixingwu"
      */
     public static String city(boolean prefix) throws ScriptException {
         String format = StrFormatter.format("Random.city({})", prefix);
@@ -1144,9 +1016,7 @@ public class RandomValue {
     /**
      * 方法描述：随机生成一个（中国）县。
      * 创建时间：2019-06-14 22:24:57
-     * 创建作者：李兴武
      *
-     * @author "lixingwu"
      */
     public static String county() throws ScriptException {
         String format = StrFormatter.format("Random.county()");
@@ -1157,10 +1027,8 @@ public class RandomValue {
     /**
      * 方法描述：随机生成一个（中国）县。
      * 创建时间：2019-06-14 22:24:57
-     * 创建作者：李兴武
      *
      * @param prefix 指示是否生成所属的省。
-     * @author "lixingwu"
      */
     public static String county(boolean prefix) throws ScriptException {
         String format = StrFormatter.format("Random.county({})", prefix);
@@ -1171,9 +1039,7 @@ public class RandomValue {
     /**
      * 方法描述：随机生成一个邮政编码（六位数字）。
      * 创建时间：2019-06-14 22:24:57
-     * 创建作者：李兴武
      *
-     * @author "lixingwu"
      */
     public static String zip() throws ScriptException {
         String format = StrFormatter.format("Random.zip()");
@@ -1184,9 +1050,7 @@ public class RandomValue {
     /**
      * 方法描述：随机生成一个 18 位身份证。
      * 创建时间：2019-06-14 22:36:17
-     * 创建作者：李兴武
      *
-     * @author "lixingwu"
      */
     public static String id() throws ScriptException {
         String format = StrFormatter.format("Random.id()");
@@ -1197,10 +1061,8 @@ public class RandomValue {
     /**
      * 方法描述：根据数据模板生成模拟数据。
      * 创建时间：2019-06-14 22:42:12
-     * 创建作者：李兴武
      *
      * @param template 表示数据模板，可以是对象或字符串。例如 { 'data|1-10':[{}] }、'@EMAIL'。
-     * @author "lixingwu"
      */
     public static Map mock(String template) throws ScriptException {
         String format = StrFormatter.format("mock({})", template);
