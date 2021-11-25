@@ -10,7 +10,7 @@ import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Test; 
 
 public class RandomValueTest {
-	@Test
+    @Test
     @DisplayName("测试读js代码执行")
     public void testEval() throws Exception {
         JavaScriptEngine scriptEngine = ScriptUtil.getJavaScriptEngine();
