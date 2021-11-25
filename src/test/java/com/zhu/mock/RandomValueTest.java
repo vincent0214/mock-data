@@ -3,11 +3,10 @@ package com.zhu.mock;
 import cn.hutool.core.io.FileUtil;
 import cn.hutool.script.JavaScriptEngine;
 import cn.hutool.script.ScriptUtil;
-import org.junit.jupiter.api.Disabled;
 import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Test;
 
-class RandomValueTest {
+public class RandomValueTest {
 
     @Test
     @DisplayName("测试读js代码执行")
@@ -20,7 +19,7 @@ class RandomValueTest {
     }
 
     @Test
-    @DisplayName("随机生成一个中文名字")
+    @DisplayName("测试随机生成一个中文名字")
     public void testGetChineseName() {
         String chineseName = RandomValue.getChineseName();
         System.out.println("chineseName = " + chineseName);
@@ -33,5 +32,25 @@ class RandomValueTest {
         System.out.println("chineseName = " + chineseName);
     }
 
+    @Test
+    @DisplayName("测试生成随机日期")
+    public void testGetDate() throws Exception {
+        String result = RandomValue.date();
+        System.out.println("result = " + result);
+    }
+
+    @Test
+    @DisplayName("测试生成随机日期时间戳")
+    public void testGetDateTime() throws Exception {
+        String result = RandomValue.datetime();
+        System.out.println("result = " + result);
+    }
+
+    @Test
+    @DisplayName("测试生成随机数字")
+    public void testGetId() {
+        String result = RandomValue.getNumber(2);
+        System.out.println("result = " + result);
+    }
 
 }
