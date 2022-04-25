@@ -1,7 +1,7 @@
 ## 关于Mock-data
 Mock-data的是一个调用easymock.js生成随机数据的一个工具
 
-## 个别使用案例
+## 使用案例
 ```java
 import cn.hutool.core.io.FileUtil;
 import cn.hutool.script.JavaScriptEngine;
